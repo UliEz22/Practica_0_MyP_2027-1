@@ -1,5 +1,5 @@
 ## PRÁCTICA_0
-Equipo 113:
+Equipo 113:  
 -Aranza López Juárez  
 -Espinosa Izalde Ulises  
 **1.¿Qué significa programa de forma estructurada?**  
