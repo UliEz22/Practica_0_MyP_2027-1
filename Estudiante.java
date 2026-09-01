@@ -30,6 +30,18 @@ public class Estudiante {
         return (estado ? 1 : 0);
     }
 
+    public void calcularProm(double[] caltemp){
+        double suma = 0.0;
+        this.calficaciones = caltemp;
+
+        for(int i=0; i < calficaciones.length; i++){
+            suma += calficaciones[i];
+        }
+
+        this.promedio = Math.round((suma/calficaciones.length)*100.0) / 100.0;
+        this.estado = (promedio >= 6.0);
+    }
+
     public static double getDouble (String mensaje, int min, int max){
         double valor;
         while(true){
@@ -70,4 +82,13 @@ public class Estudiante {
             }
         }
     }
+
+    @Override
+    public String toString(){
+        return "\nESTUDIANTE:     " + nombre + "\n" +
+               "CALIFICACIONES: " + Arrays.toString(calficaciones) +
+               "\nPROMEDIO:       " + promedio + "\n" +
+               "ESTADO:         " + (estado ? "Aprobado" : "Reprobado") + "\n";
+    }
+
 }
