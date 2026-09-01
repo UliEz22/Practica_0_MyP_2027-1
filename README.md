@@ -1,4 +1,7 @@
 ## PRÁCTICA_0
+Equipo 113:
+-Aranza López Juárez
+-Espinosa Izalde Ulises
 **1.¿Qué significa programa de forma estructurada?**  
 Nuestro programa sigue una estructura fija por estructuras de control, una secuencia, selección e iteración  
 **2-¿Cuáles son las tres estructuras fundamentales de control?**  
