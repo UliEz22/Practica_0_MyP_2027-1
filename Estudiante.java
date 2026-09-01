@@ -91,4 +91,37 @@ public class Estudiante {
                "ESTADO:         " + (estado ? "Aprobado" : "Reprobado") + "\n";
     }
 
+    public static void main(String args[]){
+
+        String opcion;
+        String nombre;
+
+        System.out.println("-------------PRÁCTICA_0_CALIFICACIONES-------------");
+        opcion = getOpcion("Si desea continuar con el programa ingrese 1, de lo contrario ingrese 'salir'. ");
+
+        while(!opcion.equalsIgnoreCase("Salir")){
+        switch (opcion) {
+            case "1":
+                nombre = getString("Ingresa el nombre del estudiante: ");
+                Estudiante estudiante = new Estudiante(nombre);
+
+                double caltemp[] = new double[3];
+
+                for(int i = 0; i < caltemp.length; i++){
+                    caltemp[i] = getDouble("Ingresa la calificación " + (i + 1) + ": ", 0, 10);
+                }
+                estudiante.calcularProm(caltemp);
+
+
+                System.out.println(estudiante);
+
+                break;
+
+            default:
+                break;
+            }
+        opcion = getOpcion("Si desea continuar con el programa ingrese '1', de lo contrario ingrese 'salir'. ");
+        }
+        System.out.println("Hasta luego:)");
+    }
 }
